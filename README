@@ -1,11 +1,42 @@
-## Run with Docker
-1) `cp backend/.env.example backend/.env`
-2) `cp frontend/.env.example frontend/.env`
-3) `docker compose up --build`
+# Physics Simulation Website
 
-- Frontend: http://localhost:5173  
-- API:      http://localhost:5000
+A full-stack web app that transforms boring theory into engaging, hands-on learning by visualizing **three** physics phenomena:
 
-## Endpoints
-- `/api/quizzes`
-- `/api/quizzes/:slug` (e.g. `pendulum`)
+- **Pendulum motion**
+- **Magnetic fields**
+- **Planetary motion with gravitational fields**
+
+## Tech Stack
+
+**Frontend**
+- React (Vite)
+- Three.js (WebGL)
+- React Three Fiber / react-three-rapier (physics)
+- Tailwind CSS
+- (Some UI built with Bootstrap where useful)
+
+**Backend**
+- Node.js + Express
+- MySQL (via mysql2)  
+- REST API
+
+**Infra / Dev**
+- Docker & Docker Compose
+- Canvas API + WebGL rendering
+- Hot reload in dev
+
+---
+
+## Quick Start (Docker)
+
+```bash
+# 1) clone
+git clone https://github.com/Rameen222/Physics-Simulation-Website-.git
+cd Physics-Simulation-Website-
+
+# 2) create envs from templates (never commit real .env files)
+cp backend/.env.example backend/.env
+cp frontend/.env.example frontend/.env
+
+# 3) run
+docker compose up --build
