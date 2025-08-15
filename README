@@ -24,6 +24,7 @@ A full-stack web app that transforms boring theory into engaging, hands-on learn
 - Docker & Docker Compose
 - Canvas API + WebGL rendering
 - Hot reload in dev
+- GitHub Codespaces (`.devcontainer` included)
 
 ---
 
@@ -40,3 +41,7 @@ cp frontend/.env.example frontend/.env
 
 # 3) run
 docker compose up --build
+
+
+
+NOTE: could alternatively also run the code in Github codepsace or directly on local dev
