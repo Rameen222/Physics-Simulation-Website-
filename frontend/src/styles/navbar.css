@@ -1,0 +1,109 @@
+/* 🌟 Navbar - Transparent by default */
+.navbar {
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    padding: 6px 20px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  /* 🌟 Navbar when scrolled - frosted effect */
+  .scrolled-navbar {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    padding: 4px 20px;
+  }
+  
+  /* 🌟 Navbar container full-width + corners aligned */
+  .navbar .container {
+    max-width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* 🌟 Navbar Logo - Smaller and static */
+  .nav-logo {
+    height: 60px !important;
+    width: auto;
+    margin: 0 !important;
+    transition: none !important;
+  }
+  .scrolled-navbar .nav-logo {
+    height: 60px !important;
+    margin: 0 !important;
+  }
+  
+  /* 🌟 Navbar Links */
+  .navbar-nav {
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+  .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  .scrolled-navbar .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+  
+  /* 🌟 Hover Effects */
+  .navbar-nav .nav-link:hover {
+    color: #34d399 !important;
+  }
+  .scrolled-navbar .nav-link:hover {
+    color: #2ce0e6 !important;
+  }
+  
+  /* 🌟 Mobile Toggler */
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  .scrolled-navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  .scrolled-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+  /* 🌟 Responsive Logo */
+  @media (max-width: 768px) {
+    .nav-logo {
+      height: 50px !important;
+    }
+  
+    .scrolled-navbar .nav-logo {
+      height: 50px !important;
+    }
+  
+    .navbar-collapse {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 4px;
+    }
+  
+    .scrolled-navbar .navbar-collapse {
+      background: rgba(0, 0, 0, 0.85);
+    }
+  }
+  .simulation-canvas {
+    position: relative;
+    z-index: 50;
+  }
+  

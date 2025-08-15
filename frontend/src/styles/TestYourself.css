@@ -1,0 +1,238 @@
+/* Test Yourself Page Styles */
+body {
+    background-color: #0f121a;
+    color: white;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+ /* Rename this */
+.quiz-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  
+  .page-title {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .page-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #c0c0d0;
+    margin-bottom: 40px;
+  }
+  
+  /* Quiz Card Styles */
+  .quiz-card {
+    background-color: #171a26;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .quiz-card-header {
+    height: 8px;
+    width: 100%;
+  }
+  
+  .quiz-card-header.pendulum {
+    background: linear-gradient(90deg, #00c6e0 0%, #0077ff 100%);
+  }
+  
+  .quiz-card-header.gravitational {
+    background: linear-gradient(90deg, #ffc700 0%, #ff7700 100%);
+  }
+  
+  .quiz-card-header.magnetic {
+    background: linear-gradient(90deg, #9d4edd 0%, #ff3399 100%);
+  }
+  
+  .quiz-card-content {
+    padding: 30px;
+  }
+  
+  .quiz-card-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  .quiz-card-description {
+    color: #9CA3AF;
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+  
+  /* Quiz Button Styles */
+  .quiz-button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .quiz-button:hover {
+    opacity: 0.9;
+  }
+  
+  .quiz-button.pendulum {
+    background: linear-gradient(90deg, #00c6e0 0%, #0077ff 100%);
+  }
+  
+  .quiz-button.gravitational {
+    background: linear-gradient(90deg, #ffc700 0%, #ff7700 100%);
+  }
+  
+  .quiz-button.magnetic {
+    background: linear-gradient(90deg, #9d4edd 0%, #ff3399 100%);
+  }
+  
+  /* Quiz Question Styles */
+  .question-container {
+    border: 1px solid #2d3341;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .question-text {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  
+  .option {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #252a3a;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .option:hover {
+    background-color: #323848;
+  }
+  
+  .option.selected {
+    border: 1px solid #4d5566;
+  }
+  
+  .option.correct {
+    background-color: rgba(34, 197, 94, 0.2);
+    border: 1px solid #22c55e;
+  }
+  
+  .option.incorrect {
+    background-color: rgba(239, 68, 68, 0.2);
+    border: 1px solid #ef4444;
+  }
+  
+  .correct-answer {
+    margin-top: 10px;
+    color: #22c55e;
+    font-size: 14px;
+  }
+  
+  /* Score Display */
+  .score-display {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .score-percentage {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .score-message {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .score-message.excellent {
+    color: #22c55e;
+  }
+  
+  .score-message.good {
+    color: #eab308;
+  }
+  
+  .score-message.needs-practice {
+    color: #ef4444;
+  }
+  
+  /* Retry Button */
+  .retry-button {
+    background-color: #323848;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .retry-button:hover {
+    background-color: #3e4556;
+  }
+  
+  /* Close Button */
+  .close-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #323848;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .close-button:hover {
+    background-color: #3e4556;
+  }
+  
+  /* Logo and Navigation */
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 30px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px 15px;
+    }
+    
+    .quiz-card-content {
+      padding: 20px;
+    }
+    
+    .page-title {
+      font-size: 32px;
+      text-align: center;
+    }
+    
+    .page-subtitle {
+      text-align: center;
+    }
+  }

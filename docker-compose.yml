@@ -1,0 +1,53 @@
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: devroot      # dev-only
+      MYSQL_DATABASE: phy_web
+      MYSQL_USER: app                   # dev app user
+      MYSQL_PASSWORD: app               # dev app pass
+    ports:
+      - "3307:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./test_yourself/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -pdevroot || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file: ./backend/.env            
+    environment:
+      PORT: 5000
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: app
+      DB_PASSWORD: app
+      DB_NAME: phy_web
+      CORS_ORIGIN: http://localhost:5173
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "5000:5000"
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    env_file: ./frontend/.env
+    environment:
+      VITE_API_ORIGIN: http://api:5000
+    depends_on:
+      - api
+    ports:
+      - "5173:5173"
+    command: ["npm","run","dev","--","--host","0.0.0.0"]
+
+volumes:
+  dbdata:

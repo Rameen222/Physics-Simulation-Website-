@@ -1,0 +1,120 @@
+/* 🌙 General Styles */
+body {
+  background-color: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* 🌙 Navbar */
+.navbar-brand img {
+  height: 40px;
+}
+.navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.navbar-nav .nav-link {
+  color: white !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.navbar-nav .nav-link:hover {
+  color: #34d399 !important;
+}
+
+/* 🌙 Gradient Text */
+.text-gradient {
+  background: linear-gradient(to right, #34d399, #8b5cf6, #f43f5e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🌙 Hero Section */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(to bottom, #111827, #1f2937);
+  position: relative;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-section .btn-success {
+  box-shadow: 0 4px 6px rgba(0, 255, 127, 0.5);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.hero-section .btn-success:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 255, 127, 0.7);
+}
+
+/* 🌙 Bouncing Icon */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.bounce {
+  animation: bounce 1.5s infinite;
+}
+
+/* 🌙 Simulation Cards */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 15px;
+  margin-bottom: 20px; /* 👈 This creates vertical spacing */
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* ✨ Colored Glow Effects */
+.card.simulation-green:hover {
+  box-shadow: 0 0 25px 8px rgba(52, 211, 153, 0.6) !important;
+}
+.card.simulation-blue:hover {
+  box-shadow: 0 0 25px 8px rgba(59, 130, 246, 0.6) !important;
+}
+.card.simulation-red:hover {
+  box-shadow: 0 0 25px 8px rgba(239, 68, 68, 0.6) !important;
+}
+
+/* 🌙 Simulation Icons */
+.simulation-icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.bg-success {
+  background: #198754 !important;
+}
+.bg-primary {
+  background: #0d6efd !important;
+}
+.bg-danger {
+  background: #dc3545 !important;
+}
+
+/* 📨 Contact Form */
+.form-control {
+  background: #1e1e1e;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.btn-success {
+  background: linear-gradient(to right, #34d399, #22c55e);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.btn-success:hover {
+  background: linear-gradient(to right, #22c55e, #16a34a);
+}
