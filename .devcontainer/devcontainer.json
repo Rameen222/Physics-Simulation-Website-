@@ -1,0 +1,28 @@
+{
+  "name": "Physics Simulation Website",
+  // base image with node + git (fine for Docker-in-Docker)
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "features": {
+    // gives you `docker` + `docker compose` inside Codespaces
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "cp -n backend/.env.example backend/.env || true && cp -n frontend/.env.example frontend/.env || true",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "forwardPorts": [5173, 5000],
+  "portsAttributes": {
+    "5173": { "label": "Vite (web)", "requireLocalPort": true },
+    "5000": { "label": "API", "requireLocalPort": true }
+  },
+  "remoteUser": "node"
+}
